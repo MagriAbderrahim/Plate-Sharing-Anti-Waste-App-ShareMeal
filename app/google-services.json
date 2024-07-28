@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "695004497446",
+    "project_id": "app-nouriture-65d69",
+    "storage_bucket": "app-nouriture-65d69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695004497446:android:cb48e52fea2fafc3b3c8e7",
+        "android_client_info": {
+          "package_name": "com.example.shearemeal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw5gJB45w-MuUwAxLstAcsjA0PENF_LF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

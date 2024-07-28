@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.EditPostActivity">
+    <RelativeLayout
+        android:id="@+id/titleactionbaradpost"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/orange"
+        >
+        <ImageButton
+            android:id="@+id/btnbackhome"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:contentDescription="hhhh"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/textviewadpost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifier la publication"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+        <ImageButton
+            android:id="@+id/btnaddphoto"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:background="@color/transparent"
+            android:contentDescription="hhhh"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_add_a_photo_24" />
+
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_above="@+id/btnsubmit"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleactionbaradpost">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Image View for displaying uploaded image -->
+            <ImageButton
+                android:id="@+id/uploadedImageView"
+                android:layout_width="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:background="#A6A2A2"
+                android:src="@drawable/baseline_add_a_photo_24"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp"/>
+
+            <!-- TextInputLayout for Title -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/titleInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uploadedImageView"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/titleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Titre de publication"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextInputLayout for Description -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/descriptionInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/titleInputLayout"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/descriptionEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="5"
+                    android:hint="Description"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextInputLayout for Location -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/locationInputLayout"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true"
+                android:layout_below="@id/descriptionInputLayout"
+                app:contentPadding="10dp">
+                <TextView
+                    android:id="@+id/locationTv"
+                    android:layout_width="match_parent"
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_location_on_24"
+                    android:drawableEnd="@drawable/baseline_navigate_next_24"
+                    android:drawablePadding="10dp"
+                    android:text="Choisir Localisation"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CategorieInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Catégorie"
+                android:layout_below="@id/locationInputLayout"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="32dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/CategorieEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnsubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:text="Modifier la publication"
+        android:backgroundTint="@color/orange"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

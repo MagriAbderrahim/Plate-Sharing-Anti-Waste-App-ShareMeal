@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.DetailsPostActivity">
+    <RelativeLayout
+        android:id="@+id/toolbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/orange">
+
+        <ImageButton
+            android:id="@+id/toolbarbackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:background="@color/transparent"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/gg"
+            />
+
+        <TextView
+            android:id="@+id/textviewdetailspost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Détails de la publication"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="13dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/hh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarRL">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/imageSliderVp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                />
+
+            <TextView
+                android:id="@+id/CategorieLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:text="Categorie"
+                android:layout_below="@+id/imageSliderVp"
+                />
+
+            <TextView
+                android:id="@+id/datepub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_alignParentEnd="true"
+                android:text="date publication"
+                android:layout_below="@+id/imageSliderVp"/>
+            <TextView
+                android:id="@+id/CategorieTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem[2]"
+                android:layout_below="@+id/CategorieLabel"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                />
+            <TextView
+                android:id="@+id/titleLabelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Titre"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/CategorieTv"
+                />
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem[5]"
+                android:layout_below="@+id/titleLabelTv"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                />
+            <TextView
+                android:id="@+id/descriptionLabelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/titleTv"
+                />
+            <TextView
+                android:id="@+id/descriptionTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem[20]"
+                android:layout_below="@+id/descriptionLabelTv"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                />
+            <TextView
+                android:id="@+id/descriptiondonneurLabelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description du donneur"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/descriptionTv"
+                />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/donneurProfileCv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptiondonneurLabelTv"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="10dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/profiledonneur"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_person"
+                        android:layout_marginEnd="10dp"
+                        android:background="#777272"
+                        app:shapeAppearanceOverlay="@style/CircleShape1"
+                        />
+                    <TextView
+                        android:id="@+id/donneurNomTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="@tools:sample/full_names"
+                        android:layout_toEndOf="@id/profiledonneur"
+                        style="@style/TextAppearance.MaterialComponents.Body1"
+                        />
+                    <TextView
+                        android:id="@+id/memberSinceLabelTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Membre depuis"
+                        android:layout_below="@+id/donneurNomTv"
+                        style="@style/TextAppearance.MaterialComponents.Caption"
+                        android:layout_toEndOf="@id/profiledonneur"
+
+                        />
+                    <TextView
+                        android:id="@+id/memberSinceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="dd/MM/yyyy"
+                        android:layout_marginStart="10dp"
+                        android:layout_below="@+id/donneurNomTv"
+                        style="@style/TextAppearance.MaterialComponents.Caption"
+                        android:layout_toEndOf="@id/memberSinceLabelTv"
+                        />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <LinearLayout
+                android:layout_below="@id/donneurProfileCv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonCallDonneur"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="60dp"
+                    android:text="Appeler le donneur"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/orange"
+                    android:textSize="16sp"
+                    app:icon="@drawable/ic_call"
+                    app:iconGravity="start"
+                    app:iconTint="@color/white"
+                    android:fontFamily="@font/poppins"
+                    android:textStyle="bold"
+                    android:layout_margin="20dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttongpsCallDonneur"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="60dp"
+                    android:text="Localiser le donneur"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/orange"
+                    android:textSize="16sp"
+                    app:icon="@drawable/baseline_gps_fixed_24"
+                    app:iconGravity="start"
+                    app:iconTint="@color/white"
+                    android:fontFamily="@font/poppins"
+                    android:textStyle="bold"
+                    android:layout_margin="20dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonSignalDonneur"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="60dp"
+                    android:text="Signaler le donneur"
+                    android:backgroundTint="@color/orange"
+                    android:textSize="16sp"
+                    app:icon="@drawable/baseline_report_24"
+                    app:iconGravity="start"
+                    app:iconTint="@color/white"
+                    android:fontFamily="@font/poppins"
+                    android:textStyle="bold"
+                    android:layout_margin="20dp"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>  <!-- Added closing tag -->
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PubsFragment">
+
+
+    <TextView
+        android:id="@+id/textusers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tous les Publications"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"
+        />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/searchCv"
+        android:layout_margin="20dp"
+        android:layout_below="@id/textusers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cardCornerRadius="5dp"
+        cardUseCompatPadding="true">
+        <EditText
+            android:id="@+id/searchEt"
+            android:drawableStart="@drawable/baseline_search_24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Recherchez des Utilisateurs...."
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+
+            android:drawablePadding="10dp" />
+    </com.google.android.material.card.MaterialCardView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewpostesadmin"
+        android:layout_below="@id/searchCv"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_post"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_delete_user"
+        android:title="Supprimer utilisateur" />
+    <item
+        android:id="@+id/action_block_user"
+        android:title="Bloquer utilisateur" />
+</menu>

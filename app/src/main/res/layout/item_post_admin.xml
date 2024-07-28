@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageIv"
+            style="@style/CircleShape2"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/black"
+            android:scaleType="center"
+            android:src="@drawable/baseline_add_a_photo_24" />
+
+        <TextView
+            android:id="@+id/titleTv"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/imageIv"
+            android:layout_toStartOf="@+id/favBtn"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="The Ad Title"/>
+        <TextView
+            android:id="@+id/titleTvdesc"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/imageIv"
+            android:layout_below="@id/titleTv"
+            android:layout_toStartOf="@id/favBtn"
+            android:ellipsize="end"
+            android:lines="3"
+            android:text="Assurez-vous de remplacer par le nom de votre application"/>
+
+        <ImageButton
+            android:id="@+id/favBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/baseline_more_vert_24"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"/>
+
+
+
+        <TextView
+            android:id="@+id/addressTv"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Address of the Ad"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/imageIv"
+            android:layout_below="@id/titleTvdesc"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+
+        <TextView
+            android:id="@+id/categorytxt"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categorie"
+            android:padding="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/titleTvdesc"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

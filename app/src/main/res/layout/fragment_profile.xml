@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProfileFragment"
+    android:padding="20dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/black"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_ic"
+            app:shapeAppearance="@style/CircleShape1"
+            />
+
+        <TextView
+            android:id="@+id/label_nomcomplet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom complet "
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/profileImg"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/nomcomplet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/profileImg"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/numero_de_telephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Numero de téléphone"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/label_nomcomplet"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/numtele"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="phone number"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/label_nomcomplet"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"/>
+
+
+
+        <TextView
+            android:id="@+id/adresse_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adresse email"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/numero_de_telephone"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/emaill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/numero_de_telephone"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/registeratlabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date d'inscription"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/adresse_email"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/inscripdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registration Date"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/adresse_email"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:id="@+id/preferences"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/registeratlabel"
+                android:text="Preferences"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/editProfileCv"
+                android:layout_below="@id/preferences"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:focusable="true"
+
+                app:contentPadding="10dp"
+                app:cardCornerRadius="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Modifier votre profile"
+                    android:drawablePadding="10dp"
+                    android:drawableEnd="@drawable/baseline_navigate_next_24"
+                    android:drawableStart="@drawable/personedit"/>
+            </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/logoutProfileCv"
+            android:layout_below="@id/editProfileCv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+
+
+            app:contentPadding="10dp"
+            app:cardCornerRadius="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deconnexion"
+                android:drawablePadding="10dp"
+                android:drawableEnd="@drawable/baseline_navigate_next_24"
+                android:drawableStart="@drawable/baseline_logout_24"/>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

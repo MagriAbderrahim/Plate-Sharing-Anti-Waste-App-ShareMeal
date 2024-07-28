@@ -1,0 +1,92 @@
+<!-- item_avertissement.xml -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    android:elevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+
+        <RelativeLayout
+            android:id="@+id/bhb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- Image circulaire -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImageIv"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/black"
+                android:src="@drawable/ic_person"
+                app:shapeAppearanceOverlay="@style/CircleShape1"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <!-- Texte du nom de l'utilisateur -->
+            <TextView
+                android:id="@+id/usernameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="16dp"
+                android:layout_toEndOf="@id/profileImageIv"
+                android:ellipsize="end"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:text="John Doe"
+                android:textColor="@android:color/black" />
+
+            <!-- Texte du nombre d'avertissements -->
+            <TextView
+                android:id="@+id/warningCountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/usernameTv"
+                android:layout_toEndOf="@id/profileImageIv"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="4dp"
+                android:text="Avertissements: 3"
+                android:maxLines="1"
+                android:textSize="16sp"
+                android:ellipsize="end"
+                android:textColor="@android:color/black" />
+        </RelativeLayout>
+
+
+
+        <!-- Bouton pour supprimer le compte -->
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bhb"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Supprimer utilisateur"
+            android:textSize="12sp"
+            android:backgroundTint="@color/orange"
+            android:textColor="@android:color/white" />
+
+        <!-- Bouton pour bloquer le compte -->
+        <Button
+            android:id="@+id/blockButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/deleteButton"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="Bloquer utilisateur"
+            android:textSize="12sp"
+            android:backgroundTint="@color/orange"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

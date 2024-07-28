@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">apppfm</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_api_key">AIzaSyAkAnUl1wscHWmmrxpxEXEFDLw2_Hex4mE</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="gg">MapsActivity</string>
+
+
+</resources>

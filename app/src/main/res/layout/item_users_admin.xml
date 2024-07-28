@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    android:elevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Image circulaire -->
+        <ImageView
+            android:id="@+id/imageIv"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/profile_ic"
+            android:scaleType="centerCrop"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <!-- Texte de l'email de l'utilisateur -->
+        <TextView
+            android:id="@+id/emailTv"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_toEndOf="@id/imageIv"
+            android:ellipsize="end"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:text="example@example.com"
+            android:textColor="@android:color/black" />
+
+        <!-- Texte du nom complet -->
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailTv"
+            android:layout_toEndOf="@id/imageIv"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            android:text="John Doe"
+            android:maxLines="1"
+            android:textSize="14sp"
+
+            android:ellipsize="end"
+            android:textColor="@android:color/black" />
+
+        <!-- Texte de la date d'inscription -->
+        <TextView
+            android:id="@+id/registrationDateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTv"
+            android:layout_toEndOf="@id/imageIv"
+            android:layout_marginStart="16dp"
+            android:textSize="14sp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            android:text="Inscrit le 01/01/2024"
+            android:textColor="@android:color/darker_gray" />
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:src="@drawable/baseline_more_vert_24" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

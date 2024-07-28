@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.LoginActivity">
+    <RelativeLayout
+        android:background="@color/orange"
+        android:id="@+id/actionbarlogin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <ImageButton
+            android:id="@+id/btnbacklogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:layout_marginStart="32dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Se connecter"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/actionbarlogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textviewlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONNEXION"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:lineSpacingExtra="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginemailfieldTIL"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textviewlogin"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginemailfieldTET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Adresse email"
+                android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginpasswordfieldTIL"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginemailfieldTIL"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/orange"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginpasswordfieldTET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mot de passe"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/textviewbacktoregister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vous n'avez pas un compte?"
+            android:layout_below="@id/loginpasswordfieldTIL"
+            android:layout_marginStart="32dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/textoublier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mot de passe oublie?"
+            android:layout_below="@id/textviewbacktoregister"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/orange"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Se connecter"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="80dp"
+            android:backgroundTint="@color/orange"
+            android:textSize="16sp"
+            android:minHeight="60dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"/>
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

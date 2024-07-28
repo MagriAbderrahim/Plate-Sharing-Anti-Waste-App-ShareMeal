@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/dashbord"
+        android:icon="@drawable/baseline_dashboard_24"
+        android:iconTint="@color/transparent"
+        android:title="Dashboard" />
+
+    <item
+        android:id="@+id/users"
+        android:icon="@drawable/ic_person"
+        android:iconTint="@color/transparent"
+
+        android:title="Utilisateurs" />
+
+    <item
+        android:id="@+id/pubs"
+        android:icon="@drawable/baseline_postes_24"
+        android:iconTint="@color/transparent"
+
+        android:title="Publications" />
+
+    <item
+        android:id="@+id/notifications"
+        android:icon="@drawable/baseline_notifications_24"
+        android:iconTint="@color/transparent"
+
+        android:title="Notifications" />
+</menu>
